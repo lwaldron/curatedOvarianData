@@ -55,9 +55,9 @@ jobs:
           git config --global --add safe.directory /__w/$REPO_NAME/$REPO_NAME
           git config user.name helpful-bot
           git config user.email github-actions@github.com
-          git rm */vignettes/*.Rnw
+          git rm */vignettes/*.Rnw */vignettes/*.rnw
           git commit -m "Remove .Rnw files"
-          git add *.Rmd
+          git add *.Rmd *.rmd
           git commit -m "Add .Rmd files"
 
       - name: Create Pull Request
